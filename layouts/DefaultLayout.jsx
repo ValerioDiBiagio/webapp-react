@@ -5,7 +5,7 @@ function DefaultLayout() {
     return (
         <>
             <Header />
-            <main className="container">
+            <main className="container pt-3">
                 <Outlet />
             </main>
             <footer>Footer</footer>

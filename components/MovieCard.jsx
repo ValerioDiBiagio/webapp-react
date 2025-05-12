@@ -6,7 +6,7 @@ function MovieCard({ data }) {
 
     return (
         <div className="card">
-            <img src={imagePath} alt="{title}" className="w-50 mx-auto" />
+            <img src={imagePath} alt="{title}" className="w-50 mw-100 mx-auto" />
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
                 <p>Director: <strong>{director}</strong></p>
