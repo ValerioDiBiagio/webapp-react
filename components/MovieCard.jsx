@@ -6,12 +6,12 @@ function MovieCard({ data }) {
 
     return (
         <div className="card">
-            <img src={imagePath} alt="" />
+            <img src={imagePath} alt="{title}" className="w-50 mx-auto" />
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
-                <p>Autor: <strong>{director}</strong></p>
+                <p>Director: <strong>{director}</strong></p>
                 <p className="card-text">{abstract}</p>
-                <Link to={`/movies/${id}`}>Scheda Film</Link>
+                <Link to={`/movies/${id}`} className="btn btn-primary">Scheda Film</Link>
             </div>
         </div>
     )
