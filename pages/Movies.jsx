@@ -4,8 +4,6 @@ function MoviesPage() {
             <div>Movie</div>
 
         </>
-
-
     )
 }
 

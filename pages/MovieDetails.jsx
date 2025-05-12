@@ -4,8 +4,6 @@ function MovieDetailsPage() {
             <div>Movie Details</div>
 
         </>
-
-
     )
 }
 
