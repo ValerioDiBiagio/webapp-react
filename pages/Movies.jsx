@@ -23,8 +23,8 @@ function MoviesPage() {
             <section>
                 <div className="row">
                     {movies.length ? movies.map(movie =>
-                        <div className="col-12 col-md-4">
-                            <MovieCard />
+                        <div className="col-12 col-md-4" key={movie.id}>
+                            <MovieCard data={movie} />
                         </div>) : <div>Movie not found</div>}
 
                 </div>
