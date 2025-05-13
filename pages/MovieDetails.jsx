@@ -32,8 +32,9 @@ function MovieDetailsPage() {
                 <hr />
 
                 <section id="reviews">
-                    <header>
+                    <header className="d-flex justify-content-between mb-4 align-items-center">
                         <h4>Le nostre recensioni</h4>
+                        <div>Average: {movie.average_reviews}</div>
                     </header>
                     {renderReviews()}
                 </section>
