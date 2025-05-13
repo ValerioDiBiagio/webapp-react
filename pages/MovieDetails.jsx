@@ -15,17 +15,27 @@ function MovieDetailsPage() {
 
     useEffect(getMovie, []);
 
+    function renderReviews() {
+        return movie.reviews?.map(review => <div>reviews</div>);
+
+    }
+
     return (
 
-        <article>
+        <article id="movie">
             {movie ? <>
                 <h1>{movie.title}</h1>
-                <h2>Director: {movie.director}</h2>
+                <h2>Director: {movie?.director}</h2>
                 <p>{movie.abstract}</p>
 
                 <hr />
 
-                {movie.reviews?.length ? <div>Elenco recensioni</div> : <div>Nessuna recensione</div>}
+                <section id="reviews">
+                    <header>
+                        <h4>Le nostre recensioni</h4>
+                    </header>
+                    {renderReviews()}
+                </section>
 
             </> : 'Film non trovato'
             }
