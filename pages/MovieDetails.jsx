@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import ReviewCard from "../components/ReviewCard";
 
 function MovieDetailsPage() {
     const { id } = useParams()
@@ -16,7 +17,7 @@ function MovieDetailsPage() {
     useEffect(getMovie, []);
 
     function renderReviews() {
-        return movie.reviews?.map(review => <div>reviews</div>);
+        return movie.reviews?.map(review => <ReviewCard key={review.id} data={review} />);
 
     }
 
