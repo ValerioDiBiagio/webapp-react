@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import StarRating from "./StarRating";
 
 function MovieCard({ data }) {
 
@@ -10,7 +11,7 @@ function MovieCard({ data }) {
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
                 <p>Director: <strong>{director}</strong></p>
-                <p>Average reviews: {average_reviews}</p>
+                <p>Average reviews: <StarRating vote={average_reviews} /></p>
                 <p className="card-text">{abstract}</p>
                 <Link to={`/movies/${id}`} className="btn btn-primary">Scheda Film</Link>
             </div>

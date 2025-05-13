@@ -4,7 +4,6 @@ function StarRating({ vote }) {
 
     return (
         [...Array(maxValue)].map((__, index) => <i key={index} className={`text-warning fa-star fa-${index < vote ? 'solid' : 'regular'}`}></i>)
-
     )
 }
 
