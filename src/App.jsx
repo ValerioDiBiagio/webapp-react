@@ -10,10 +10,10 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
 
   return (
-    <GlobalContext.Provider value={(
+    <GlobalContext.Provider value={{
       isLoading,
       setIsLoading
-    )}>
+    }}>
       <BrowserRouter>
         <Routes>
           <Route Component={DefaultLayout}>
