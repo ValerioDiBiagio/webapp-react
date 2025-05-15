@@ -97,3 +97,22 @@ All’invio del form, la nuova recensione viene salvata sul database e visualizz
 ## BONUS:
 
 Provate a creare un nuovo film con upload immagine (multer)!
+
+---
+# Book Reviews
+
+## Quinto ed ultimo giorno di lavoro:
+
+## Esercizio:
+
+Concludiamo migliorando l’esperienza sulla nostra SPA, inserendo un loader.
+
+Creiamo un componente loader
+
+Questo componente deve poter apparire su qualunque pagina della nostra app.
+
+Creiamo e sfruttiamo un Context per dare la possibilità ad ogni componente di attivare o disattivare il loader sulla propria pagina
+
+## BONUS:
+
+Personalizziamo l’aspetto della nostra app col CSS
