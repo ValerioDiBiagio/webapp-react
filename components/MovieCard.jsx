@@ -3,7 +3,7 @@ import StarRating from "./StarRating";
 
 function MovieCard({ data }) {
 
-    const { id, title, director, abstract, imagePath, average_reviews } = data
+    const { title, director, abstract, imagePath, average_reviews, slug } = data
 
     return (
         <div className="card">
@@ -13,7 +13,7 @@ function MovieCard({ data }) {
                 <p>Director: <strong>{director}</strong></p>
                 <p>Average reviews: <StarRating vote={average_reviews} /></p>
                 <p className="card-text">{abstract}</p>
-                <Link to={`/movies/${id}`} className="btn btn-primary">Scheda Film</Link>
+                <Link to={`/movies/${slug}`} className="btn btn-primary">Scheda Film</Link>
             </div>
         </div>
     )
