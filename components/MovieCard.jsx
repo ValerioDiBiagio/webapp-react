@@ -6,8 +6,8 @@ function MovieCard({ data }) {
     const { title, director, abstract, imagePath, average_reviews, slug } = data
 
     return (
-        <div className="card">
-            <img src={imagePath} alt="{title}" className="w-50 mw-100 mx-auto" />
+        <div className="card bg-secondary pt-3">
+            <img src={imagePath} alt="{title}" className="w-50 mw-100 mx-auto rounded" />
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
                 <p>Director: <strong>{director}</strong></p>

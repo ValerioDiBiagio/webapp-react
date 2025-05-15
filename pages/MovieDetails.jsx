@@ -36,10 +36,11 @@ function MovieDetailsPage() {
 
         <article id="movie">
             {movie ? <div>
+                <img className="w-25 mb-2 rounded" src={movie.imagePath} alt="{movie.imagePath}" />
                 <h1>{movie.title}</h1>
                 <h2>Director: {movie?.director}</h2>
                 <p>{movie.abstract}</p>
-            </div> : <div> Film non trovat'</div>}
+            </div> : <div> Film non trovato</div>}
 
             <hr />
 
@@ -47,7 +48,7 @@ function MovieDetailsPage() {
                 <header className="d-flex justify-content-between mb-4 align-items-center">
                     <h4>Le nostre recensioni</h4>
                     <div>
-                        Average: {movie.average_reviews} <StarRating vote={movie.average_reviews} />
+                        <strong>Average:</strong> {movie.average_reviews} <StarRating vote={movie.average_reviews} />
                     </div>
                 </header>
                 {movie.reviews?.length ? renderReviews() : <div>Nessuna recensione</div>}

@@ -55,7 +55,7 @@ function MoviesPage() {
             </div>
 
 
-            <section className="container">
+            <section className="container mb-5">
                 <div className="row gy-3">
                     {movies.length ? movies.map(movie =>
                         <div className="col-12 col-md-4" key={movie.id}>
