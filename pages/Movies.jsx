@@ -1,6 +1,8 @@
 import MovieCard from "../components/MovieCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useContext } from "react";
+import GlobalContext from "../contexts/globalContext";
 
 function MoviesPage() {
 
@@ -8,7 +10,12 @@ function MoviesPage() {
 
     const [search, setSearch] = useState('')
 
+    const { setIsLoading } = useContext(GlobalContext);
+
     function getMovies() {
+
+        setIsLoading(true);
+
         axios.get('http://127.0.0.1:3000/movies', {
             params: {
                 search
@@ -16,10 +23,10 @@ function MoviesPage() {
         })
 
             .then(response => {
-                console.log(response.data);
                 setMovies(response.data);
             })
             .catch(err => console.log(err))
+            .finally(() => setIsLoading(false))
     }
 
     useEffect(getMovies, []);

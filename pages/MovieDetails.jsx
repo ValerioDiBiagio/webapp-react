@@ -4,16 +4,25 @@ import { useParams } from "react-router-dom";
 import ReviewCard from "../components/ReviewCard";
 import StarRating from "../components/StarRating";
 import ReviewForm from "../components/ReviewForm";
+import { useContext } from "react";
+import GlobalContext from "../contexts/globalContext";
+
 
 function MovieDetailsPage() {
     const { id } = useParams()
     const [movie, setMovie] = useState({});
 
+    const { setIsLoading } = useContext(GlobalContext);
+
 
     function getMovie() {
+
+        setIsLoading(true)
+
         axios(`http://127.0.0.1:3000/movies/${id}`)
             .then(response => setMovie(response.data))
-            .catch(err => console.log(err));
+            .catch(err => console.log(err))
+            .finally(() => setIsLoading(false))
     }
 
     useEffect(getMovie, []);
